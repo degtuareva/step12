@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+@keyframes duckFly{
+	0%{
+        left: -60px;
+        top: 50%;
+    }
+    25%{
+        left: 25%;
+        top: 20%;
+    }
+	50%{
+        left: 50%;
+        top: 70%;
+    }
+    75%{
+        left: 75%;
+        top: 35%;
+    }
+	100% {
+		left: 100%;
+        top: 55%;
+	}
+}
+@keyframes duckFlyTwo{
+	0%{
+        left: -60px;
+        top: 50%;
+    }
+    25%{
+        left: 25%;
+        top: 40%;
+        transform: rotate(360deg);
+    }
+	50%{
+        left: 50%;
+        top: 60%;
+    }
+    75%{
+        left: 75%;
+        top: 35%;
+    }
+	100% {
+		left: 100%;
+        top: 55%;
+	}
+}
+.map{
+    background-image:url(../images/fon.jpg);
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+}
+input[type="checkbox"]{
+    visibility: hidden;
+    left: -9999px;
+    z-index: -5;
+    position: absolute;
+}
+.duck{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    background-image: url(../img/duck_hunt_bird_big2.gif);
+    display: block;
+    position: absolute;
+    left: -60px;
+}
+input[type="checkbox"]:checked{
+    counter-increment: score;
+}
+.count::after{
+    content: counter(score);
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+}
+.duck1{
+    animation: duckFly 5s ease 0s 1 normal;
+}
+.duck2{
+    animation: duckFly 7s ease 0s 1 normal;
+}
+.duck3{
+    animation: duckFlyTwo 3s ease 0s 1 normal;
+}
+.duck4{
+    animation: duckFly 8s ease 0s 1 normal;
+}
+.duck5{
+    animation: duckFly 2s ease 0s 1 normal;
+}
+.duck6{
+    animation: duckFly 9s ease 2.5s 1 normal;
+}
+.duck7{
+    animation: duckFly 6s ease 6s 1 normal;
+}
+.duck8{
+    animation: duckFly 4s ease 8s 1 normal;
+}
